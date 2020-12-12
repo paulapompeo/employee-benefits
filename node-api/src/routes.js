@@ -4,6 +4,7 @@ const routes = express.Router();
 const CompanyController = require("./controllers/CompanyController")
 
 routes.get('/companies', CompanyController.index);
+routes.get('/companies/:id', CompanyController.show);
 routes.post('/companies', CompanyController.store);
 
 module.exports = routes;

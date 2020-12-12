@@ -10,12 +10,14 @@ module.exports = {
   },
   
   async store(request, response){
-    // criacao
     const company = await Company.create(request.body);
 
     return response.json(company);
-  }
+  },
 
-  sy
+  async show(request, response){
+    const company = await Company.findById(request.params.id);
+
+    return response.json(company);
+  }
 }
-// verificar pq nao ta retornando
