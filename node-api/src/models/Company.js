@@ -18,7 +18,7 @@ const CompanySchema = new mongoose.Schema({
     required: true,
   },
   benefits: {
-    type: [[]], 
+    type: [], 
     required: true,
   },
   createdAt: {
