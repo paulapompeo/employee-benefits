@@ -19,5 +19,17 @@ module.exports = {
     const company = await Company.findById(request.params.id);
 
     return response.json(company);
-  }
+  },
+
+  async update(request, response){
+    const company = await Company.findByIdAndUpdate(request.params.id, request.body, { new: true });
+
+    return response.json(company)
+  },
+
+  async destroy(request, response) {
+    await Company.findByIdAndRemove(request.params.id);
+
+    return response.send()
+  },
 }
