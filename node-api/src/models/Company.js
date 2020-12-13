@@ -21,6 +21,10 @@ const CompanySchema = new mongoose.Schema({
     type: [], 
     required: true,
   },
+  employees: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Employee'
+  }],
   createdAt: {
     type: Date, 
     default: Date.now,

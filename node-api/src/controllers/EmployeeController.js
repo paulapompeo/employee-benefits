@@ -8,15 +8,15 @@ module.exports = {
 
     return response.json(employees);
   },
-  
-  async store(request, response){
-    const employee = await Employee.create(request.body);
+ 
+  async show(request, response){
+    const employee = await Employee.findById(request.params.id);
 
     return response.json(employee);
   },
 
-  async show(request, response){
-    const employee = await Employee.findById(request.params.id);
+  async store(request, response){
+    const employee = await Employee.create({...request.body});
 
     return response.json(employee);
   },

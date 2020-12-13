@@ -11,8 +11,6 @@ app.use(cors());
 mongoose.connect('mongodb://localhost:27017/nodeapi', { useNewUrlParser: true, useUnifiedTopology: true });
 requireDir('./src/models');
 
-// const Employee = mongoose.model('Employee');
-
 app.use('/api', require('./src/routes'));
 
 app.listen(3333, () => {
