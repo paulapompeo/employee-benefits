@@ -8,6 +8,7 @@ routes.get('/companies', CompanyController.index);
 routes.get('/companies/:id', CompanyController.show);
 routes.post('/companies', CompanyController.store);
 routes.post('/companies/:id/employees', CompanyController.addEmployee);
+routes.get('/companies/:id/employees', CompanyController.showEmployees);
 routes.put('/companies/:id', CompanyController.update);
 routes.delete('/companies/:id', CompanyController.destroy);
 

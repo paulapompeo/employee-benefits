@@ -113,5 +113,21 @@ module.exports = {
       console.log(err)
       return response.status(400).send({ error: 'Error creating Employee'})
     }
+  },
+
+  async showEmployees(request, response) {
+    try {
+      const company = await Company.findById(request.params.id).populate('employees')
+
+      const employees = await Employee.find().where('company').equals(company._id);
+
+      console.log(employees)
+
+      return response.json(employees);
+
+    } catch (err) {
+      console.log(err)
+      return response.status(400).send({ error: 'Error loading Employees'})
+    }
   }
 }
