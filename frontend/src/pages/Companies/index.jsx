@@ -5,11 +5,6 @@ import api from '../../services/api.js';
 
 import * as S from './styles.js';
 
-// interface Company {
-//   _id: string;
-//   name: string;
-//   trade: string;
-// }
 
 const Companies = () => {
   const [newCo, setNewCo] = useState('');
