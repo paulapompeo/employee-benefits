@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import { useRouteMatch } from 'react-router-dom';
 import { Table } from 'antd';
 
 import * as S from './styles.js';
@@ -6,10 +7,14 @@ import 'antd/dist/antd.css';
 import api from '../../services/api.js';
 
 const Employees = () => {
+  const { params } = useRouteMatch();
+  console.log(params)
+  console.log(params.company)
+
   const [employees, setEmployees] = useState([]);
 
   useEffect(() => {
-    api.get('employees').then((response) => {
+    api.get(`/employees`).then((response) => {
       setEmployees(response.data);
       console.log(response.data);
     });
@@ -19,14 +24,16 @@ const Employees = () => {
     {
       key: '1',
       name: 'Mike',
-      age: 32,
-      address: '10 Downing Street',
+      lastname: 'Pompeo',
+      cpf: 3232432,
+      email: 'mikepompeo@gmail.com',
     },
     {
       key: '2',
       name: 'John',
-      age: 42,
-      address: '10 Downing Street',
+      lastname: 'Doe',
+      cpf: 3232432,
+      email: 'mikepompeo@gmail.com',
     },
   ];
 
@@ -37,14 +44,19 @@ const Employees = () => {
       key: 'name',
     },
     {
-      title: 'Age',
-      dataIndex: 'age',
-      key: 'age',
+      title: 'Sobrenome',
+      dataIndex: 'lastname',
+      key: 'lastname',
     },
     {
-      title: 'Address',
-      dataIndex: 'address',
-      key: 'address',
+      title: 'CPF',
+      dataIndex: 'cpf',
+      key: 'cpf',
+    },
+    {
+      title: 'Email',
+      dataIndex: 'email',
+      key: 'email',
     },
   ];
 
@@ -52,7 +64,7 @@ const Employees = () => {
     <>
       <S.Header />
       <S.Content>
-          <S.Title>Empresa da Livia</S.Title>
+          <S.Title>{params.company}</S.Title>
         <Table dataSource={dataSource} columns={columns} />
       </S.Content>
     </>
