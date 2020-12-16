@@ -87,6 +87,7 @@ export const Companies = styled.div`
 
     div {
       margin-left: 24px;
+      flex: 1;
 
       strong {
         font-size: 20px;
