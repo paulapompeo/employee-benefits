@@ -22,7 +22,7 @@ export const Title = styled.h1`
 
 export const Form = styled.form`
   margin-top: 40px;
-  max-width: 900px;
+  max-width: 960px;
 
   display: flex;
 
@@ -55,4 +55,54 @@ export const Form = styled.form`
   }
 `;
 
-export const Companies = styled.div``;
+export const Companies = styled.div`
+  margin-top: 80px;
+  max-width: 960px;
+
+  a {
+    background: #fff;
+    border-radius: 5px;
+    width: 100%;
+    padding: 24px;
+    display: block;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s;
+
+    & + a {
+      margin-top: 16px;
+    }
+
+    &:hover {
+      transform: translateX(10px);
+    }
+
+    img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
+
+    div {
+      margin-left: 24px;
+
+      strong {
+        font-size: 20px;
+        color: #2b3939;
+      }
+
+      p {
+        font-size: 18px;
+        color: #b7c4c4;
+        margin-top: 8px;
+      }
+    }
+
+    svg {
+      margin-left: auto;
+      color: #2b3939;
+    }
+  }
+`;
