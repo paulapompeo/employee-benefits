@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { FiChevronRight } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 import api from '../../services/api';
 
 import * as S from './styles';
 
 interface Company {
+  _id: string;
   name: string;
   trade: string;
 }
@@ -16,7 +18,7 @@ const Dashboard: React.FC = () => {
   useEffect(() => {
     api.get('companies').then(response => {
       setCompanies(response.data);
-      console.log(response.data);
+      // console.log(response.data);
     });
   }, []);
 
@@ -32,7 +34,8 @@ const Dashboard: React.FC = () => {
 
         <S.Companies>
           {companies.map(company => (
-            <a key={company.name} href="teste">
+            // eslint-disable-next-line no-underscore-dangle
+            <Link key={company.name} to={`/companies/${company._id}/employees`}>
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxillRIfXpKXCxZYyewPh_3vorbGIGPEgzMw&usqp=CAU"
                 alt="Company Logo"
@@ -43,7 +46,7 @@ const Dashboard: React.FC = () => {
               </div>
 
               <FiChevronRight size={32} />
-            </a>
+            </Link>
           ))}
         </S.Companies>
 
