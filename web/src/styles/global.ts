@@ -11,8 +11,7 @@ export default createGlobalStyle`
   }
 
   body {
-    background: #EFFAFA url(${shape}) no-repeat;
-    background-size: cover;
+    background: #EFFAFA;
     --webkit-font-smoothing: antialiased;
   }
 
@@ -21,9 +20,9 @@ export default createGlobalStyle`
   }
 
   #root {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 40px 20px;
+    /* max-width: 960px; */
+    /* margin: 0 auto;
+    padding: 40px 20px; */
   }
 
   button {
