@@ -7,7 +7,7 @@ import Employees from '../pages/Employees';
 const Routes: React.FC = () => {
   return (
     <Switch>
-      <Route path="/" exact component={Dashboard} />
+      <Route path="/companies" exact component={Dashboard} />
       <Route path="/companies/:company/employees" exact component={Employees} />
     </Switch>
   );
