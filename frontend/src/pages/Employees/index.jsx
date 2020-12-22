@@ -37,22 +37,27 @@ const Employees = () => {
     // }
   }, [params.company, params.employee]);
 
-  const dataSource = [
-    {
-      key: '1',
-      name: 'Mike',
-      lastname: 'Pompeo',
-      cpf: 3232432,
-      email: 'mikepompeo@gmail.com',
-    },
-    {
-      key: '2',
-      name: 'John',
-      lastname: 'Doe',
-      cpf: 3232432,
-      email: 'mikepompeo@gmail.com',
-    },
-  ];
+  // employee.map(employee => (
+  //   <p key={employee.name}>
+  //     {employee.name}
+  //   </p>
+
+  // const dataSource = [
+  //   {
+  //     key: '1',
+  //     name: employee.map(employee => employee.name),
+  //     lastname: 'Pompeo',
+  //     cpf: 3232432,
+  //     email: 'mikepompeo@gmail.com',
+  //   },
+  //   {
+  //     key: '2',
+  //     name: 'John',
+  //     lastname: 'Doe',
+  //     cpf: 3232432,
+  //     email: 'mikepompeo@gmail.com',
+  //   },
+  // ];
 
   const columns = [
     {
@@ -62,8 +67,8 @@ const Employees = () => {
     },
     {
       title: 'Sobrenome',
-      dataIndex: 'lastname',
-      key: 'lastname',
+      dataIndex: 'lastName',
+      key: 'lastName',
     },
     {
       title: 'CPF',
@@ -88,14 +93,14 @@ const Employees = () => {
 
           {/* {employee.name} */}
 
-          {/* ta certo, mas se da reload diz 'cannot read property map of undefined' */}
-          {employee.map(employee => (
+          {/* ta certo,*/}
+          {/* {employee.map(employee => (
             <p key={employee.name}>
               {employee.name}
             </p>
-          ))}
+          ))} */}
 
-        <Table dataSource={dataSource} columns={columns} />
+        <Table dataSource={employee} columns={columns} />
       </S.Content>
     </>
   )
