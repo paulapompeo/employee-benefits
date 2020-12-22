@@ -30,3 +30,5 @@ export const Title = styled.h1`
   font-size: 48px;
   color: #fff;
 `;
+
+export const CompanyInfo = styled.div``;

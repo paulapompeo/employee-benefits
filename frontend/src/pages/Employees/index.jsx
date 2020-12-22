@@ -57,7 +57,7 @@ const Employees = () => {
           <S.Title>{company.name}</S.Title>
           
         <Table dataSource={employee} columns={columns} />
-
+        
         <Link to="/">
           <FiChevronLeft size={20} />
             Voltar
