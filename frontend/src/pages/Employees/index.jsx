@@ -8,7 +8,8 @@ import 'antd/dist/antd.css';
 import api from '../../services/api.js';
 
 const Employees = () => {
-  const [company, setCompany] = useState({})
+  const [company, setCompany] = useState([])
+  const [employee, setEmployee] = useState([])
 
   const { params } = useRouteMatch();
 
@@ -16,8 +17,25 @@ const Employees = () => {
     api.get(`/companies/${params.company}`).then((response) => {
       setCompany(response.data)
       console.log(response.data)
-    })
-  }, [params.company]);
+    });
+    
+    api.get(`/companies/${params.company}/employees`).then((response) => {
+      setEmployee(response.data)
+      console.log(response.data[0])
+    });
+
+    // const [company, employee] = await Promise.all([
+    //   api.get(`/companies/${params.company}`),
+    //   api.get(`/companies/${params.company}/employees`)
+    // ])
+
+
+    // async function loadData() {
+    //   const company = await api.get(`/companies/${params.company}`);
+    //   const employee = await api.get(`/companies/${params.company}/employees`);
+    //   console.log(employee)
+    // }
+  }, [params.company, params.employee]);
 
   const dataSource = [
     {
@@ -68,16 +86,14 @@ const Employees = () => {
 
           {company.address}
 
+          {/* {employee.name} */}
+
           {/* ta certo, mas se da reload diz 'cannot read property map of undefined' */}
-          {company.employees.map(employee => (
+          {employee.map(employee => (
             <p key={employee.name}>
               {employee.name}
             </p>
           ))}
-
-
-
-          
 
         <Table dataSource={dataSource} columns={columns} />
       </S.Content>
