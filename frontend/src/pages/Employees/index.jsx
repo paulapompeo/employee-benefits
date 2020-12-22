@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
-import { useRouteMatch } from 'react-router-dom';
+import { useRouteMatch, Link } from 'react-router-dom';
+import { FiChevronLeft } from 'react-icons/fi';
 import { Table } from 'antd';
 
 import * as S from './styles.js';
@@ -8,8 +9,8 @@ import 'antd/dist/antd.css';
 import api from '../../services/api.js';
 
 const Employees = () => {
-  const [company, setCompany] = useState([])
-  const [employee, setEmployee] = useState([])
+  const [company, setCompany] = useState([]);
+  const [employee, setEmployee] = useState([]);
 
   const { params } = useRouteMatch();
 
@@ -24,40 +25,7 @@ const Employees = () => {
       console.log(response.data[0])
     });
 
-    // const [company, employee] = await Promise.all([
-    //   api.get(`/companies/${params.company}`),
-    //   api.get(`/companies/${params.company}/employees`)
-    // ])
-
-
-    // async function loadData() {
-    //   const company = await api.get(`/companies/${params.company}`);
-    //   const employee = await api.get(`/companies/${params.company}/employees`);
-    //   console.log(employee)
-    // }
   }, [params.company, params.employee]);
-
-  // employee.map(employee => (
-  //   <p key={employee.name}>
-  //     {employee.name}
-  //   </p>
-
-  // const dataSource = [
-  //   {
-  //     key: '1',
-  //     name: employee.map(employee => employee.name),
-  //     lastname: 'Pompeo',
-  //     cpf: 3232432,
-  //     email: 'mikepompeo@gmail.com',
-  //   },
-  //   {
-  //     key: '2',
-  //     name: 'John',
-  //     lastname: 'Doe',
-  //     cpf: 3232432,
-  //     email: 'mikepompeo@gmail.com',
-  //   },
-  // ];
 
   const columns = [
     {
@@ -87,20 +55,13 @@ const Employees = () => {
       <S.Header />
       <S.Content>
           <S.Title>{company.name}</S.Title>
-
-
-          {company.address}
-
-          {/* {employee.name} */}
-
-          {/* ta certo,*/}
-          {/* {employee.map(employee => (
-            <p key={employee.name}>
-              {employee.name}
-            </p>
-          ))} */}
-
+          
         <Table dataSource={employee} columns={columns} />
+
+        <Link to="/">
+          <FiChevronLeft size={20} />
+            Voltar
+        </Link>
       </S.Content>
     </>
   )

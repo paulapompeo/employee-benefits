@@ -5,21 +5,16 @@ import api from '../../services/api.js';
 
 import * as S from './styles.js';
 
-
-const Companies = () => {
+const Dashboard = () => {
   const [newCo, setNewCo] = useState('');
   const [companies, setCompanies] = useState([]);
 
   useEffect(() => {
     api.get('companies').then((response) => {
       setCompanies(response.data);
-      // console.log(response.data);
     });
   }, []);
 
-  // function handleAddCompanies(): void {
-  //   setCompanies([...companies, `new ${Date.now()}`]);
-  // }
 
   return (
     <>
@@ -58,4 +53,4 @@ const Companies = () => {
   );
 };
 
-export default Companies;
+export default Dashboard;
