@@ -4,21 +4,30 @@ import { Table } from 'antd';
 
 import * as S from './styles.js';
 import 'antd/dist/antd.css';
+
 import api from '../../services/api.js';
 
 const Employees = () => {
+  const [company, setCompany] = useState([])
+
   const { params } = useRouteMatch();
-  console.log(params)
-  console.log(params.company)
+  // console.log(params)
+  // console.log(params.company)
 
   const [employees, setEmployees] = useState([]);
 
   useEffect(() => {
-    api.get(`/employees`).then((response) => {
-      setEmployees(response.data);
-      console.log(response.data);
-    });
-  }, []);
+    // api.get(`/employees`).then((response) => {
+    //   setEmployees(response.data);
+    //   console.log(response.data[0]);
+    //   console.log(response.data[0].company);
+    // });
+
+    api.get(`/companies/${params.company}`).then((response) => {
+      setCompany(response.data)
+      console.log(response.data)
+    })
+  }, [params.company]);
 
   const dataSource = [
     {
@@ -64,7 +73,7 @@ const Employees = () => {
     <>
       <S.Header />
       <S.Content>
-          <S.Title>{params.company}</S.Title>
+          <S.Title>{company.name}</S.Title>
         <Table dataSource={dataSource} columns={columns} />
       </S.Content>
     </>
