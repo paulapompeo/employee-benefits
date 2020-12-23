@@ -17,6 +17,7 @@ const EmployeeSchema = new mongoose.Schema({
   cpf: {
     type: Number, 
     required: true,
+    unique: true
   },
   email: {
     type: String, 

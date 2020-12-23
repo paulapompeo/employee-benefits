@@ -12,6 +12,7 @@ const CompanySchema = new mongoose.Schema({
   cnpj: {
     type: Number, 
     required: true,
+    unique: true
   },
   address: {
     type: String, 

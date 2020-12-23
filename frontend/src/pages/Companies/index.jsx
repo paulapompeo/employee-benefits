@@ -5,7 +5,7 @@ import api from '../../services/api.js';
 
 import * as S from './styles.js';
 
-const Dashboard = () => {
+const Companies = () => {
   const [newCo, setNewCo] = useState('');
   const [companies, setCompanies] = useState([]);
 
@@ -26,13 +26,15 @@ const Dashboard = () => {
           {companies.map((company) => (
             // eslint-disable-next-line no-underscore-dangle
             <Link key={company.name} to={`/companies/${company._id}/employees`}>
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxillRIfXpKXCxZYyewPh_3vorbGIGPEgzMw&usqp=CAU"
-                alt="Company Logo"
-              />
               <div>
                 <strong>{company.name}</strong>
                 <p>{company.trade}</p>
+                <span>{company.address}</span>
+              </div>
+                <div>
+                  <ul>
+                    {company.benefits.map(benefit => <li key={benefit}>{benefit}</li>)}
+                  </ul>
               </div>
 
               <FiChevronRight size={32} />
@@ -53,4 +55,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default Companies;

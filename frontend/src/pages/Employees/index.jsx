@@ -54,11 +54,11 @@ const Employees = () => {
     <>
       <S.Header />
       <S.Content>
-          <S.Title>{company.name}</S.Title>
+        <S.Title>{company.name}</S.Title>
           
         <Table dataSource={employee} columns={columns} />
         
-        <Link to="/">
+        <Link to="/companies">
           <FiChevronLeft size={20} />
             Voltar
         </Link>

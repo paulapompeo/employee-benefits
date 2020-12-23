@@ -78,15 +78,11 @@ export const Companies = styled.div`
       transform: translateX(10px);
     }
 
-    img {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-    }
-
     div {
       margin-left: 24px;
       flex: 1;
+      display: flex;
+      flex-direction: column; 
 
       strong {
         font-size: 20px;
@@ -94,9 +90,33 @@ export const Companies = styled.div`
       }
 
       p {
-        font-size: 18px;
-        color: #b7c4c4;
+        font-size: 12px;
+        color: #4B4F57;
         margin-top: 8px;
+      }
+
+      span {
+        font-size: 12px;
+        color: #4B4F57;
+      }
+
+        ul {
+          list-style-type: none;
+          display: flex;
+        }
+
+        li {
+          color: #FFF;
+          text-decoration: none;
+          background: rgba(252,105,101,1);
+          padding: 8px;
+          border-radius: 5px;
+          font-size: 12px;
+
+          & + li {
+            margin-left: 8px;
+          }
+        }
       }
     }
 

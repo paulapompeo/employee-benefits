@@ -5,6 +5,7 @@ const CompanyController = require("./controllers/CompanyController");
 const EmployeeController = require("./controllers/EmployeeController");
 
 routes.get('/companies', CompanyController.index);
+
 routes.get('/companies/:id', CompanyController.show);
 routes.post('/companies', CompanyController.store);
 routes.post('/companies/:id/employees', CompanyController.addEmployee);
