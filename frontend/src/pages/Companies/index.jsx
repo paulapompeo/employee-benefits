@@ -42,17 +42,24 @@ const Companies = () => {
           ))}
         </S.Companies>
 
-        <S.Form action="">
-          <input
-            value={newCo}
-            onChange={(e) => setNewCo(e.target.value)}
-            placeholder="Cadastrar uma nova empresa"
-          />
-          <button type="submit">Cadastrar</button>
-        </S.Form>
+        <S.CreateCompany>
+          <Link to={`/createcompany`}>
+            <strong>Cadastrar Empresa</strong>
+          </Link>
+        </S.CreateCompany>
       </S.Content>
     </>
   );
 };
 
 export default Companies;
+
+
+{/* <S.Form action="">
+  <input
+    value={newCo}
+    onChange={(e) => setNewCo(e.target.value)}
+    placeholder="Cadastrar uma nova empresa"
+  />
+  <button type="submit">Cadastrar</button>
+</S.Form> */}
