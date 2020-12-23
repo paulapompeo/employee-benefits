@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { shade } from 'polished';
 
 export const Header = styled.div`
   background: rgb(252,50,140);
@@ -32,3 +33,25 @@ export const Title = styled.h1`
 `;
 
 export const CompanyInfo = styled.div``;
+
+export const CreateEmployee = styled.div`
+  width: 152px;
+  height: 48px;
+  background: #FC2B90;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.2s;
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    background: ${shade(0.3, '#FC2B90')};
+  }
+  
+  strong {
+    color: #fff;
+    text-align: center;
+    padding: 8px 5px;
+  }
+`;

@@ -6,7 +6,6 @@ import api from '../../services/api.js';
 import * as S from './styles.js';
 
 const Companies = () => {
-  const [newCo, setNewCo] = useState('');
   const [companies, setCompanies] = useState([]);
 
   useEffect(() => {
@@ -14,7 +13,6 @@ const Companies = () => {
       setCompanies(response.data);
     });
   }, []);
-
 
   return (
     <>
@@ -53,13 +51,3 @@ const Companies = () => {
 };
 
 export default Companies;
-
-
-{/* <S.Form action="">
-  <input
-    value={newCo}
-    onChange={(e) => setNewCo(e.target.value)}
-    placeholder="Cadastrar uma nova empresa"
-  />
-  <button type="submit">Cadastrar</button>
-</S.Form> */}

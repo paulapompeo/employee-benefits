@@ -62,6 +62,12 @@ const Employees = () => {
           <FiChevronLeft size={20} />
             Voltar
         </Link>
+
+        <S.CreateEmployee>
+          <Link to={`/companies/${company._id}/employees/createemployee`}>
+            <strong>Cadastrar Funcionário</strong>
+          </Link>
+        </S.CreateEmployee>
       </S.Content>
     </>
   )
