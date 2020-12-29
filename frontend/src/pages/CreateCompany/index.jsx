@@ -10,7 +10,7 @@ import api from '../../services/api.js';
 
 const CreateCompany = () => {
 
-  // const history = useHistory();
+  const history = useHistory();
 
   function handleInputChange(event) {
     // console.log(event.target.name, event.target.value);
@@ -43,13 +43,13 @@ const CreateCompany = () => {
     console.log('passou aqui 1')
     await api.post('companies', data).then(() => {
       alert('Cadastro realizado com sucesso!');
-      history.push('/');
     }).catch(() => {
       // alert('Erro no cadastro');
     });
     console.log('passou aqui 2')
 
     alert('Empresa cadastrada')
+    history.push('/companies');
   }
 
   return (
@@ -76,7 +76,6 @@ const CreateCompany = () => {
               id="trade"
               onChange={handleInputChange}
             />
-
 
             <label htmlFor="cnpf">CNPJ</label>
             <input
