@@ -121,7 +121,7 @@ module.exports = {
 
       const employees = await Employee.find().where('company').equals(company._id);
 
-      console.log(employees)
+      //console.log(employees)
 
       return response.json(employees);
 
