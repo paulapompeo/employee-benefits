@@ -51,6 +51,9 @@ export const InputContainer = styled.div`
     font-size: 14px;
     margin-top: 24px;
   }
+  span{
+    font-size: 10px;
+  }
 
   input {
     height: 48px;

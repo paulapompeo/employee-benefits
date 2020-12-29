@@ -85,6 +85,7 @@ const CreateEmployee = () => {
             />
 
             <label htmlFor="cpf">CPF</label>
+            <span>*somente números</span>
             <input
               type="text"
               name="cpf"

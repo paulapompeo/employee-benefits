@@ -78,6 +78,7 @@ const CreateCompany = () => {
             />
 
             <label htmlFor="cnpf">CNPJ</label>
+            <span>*somente números</span>
             <input
               type="text"
               name="cnpj"
