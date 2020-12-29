@@ -29,11 +29,11 @@ const Companies = () => {
                 <p>{company.trade}</p>
                 <span>{company.address}</span>
               </div>
-                <div>
+                {/* <div>
                   <ul>
                     {company.benefits.map(benefit => <li key={benefit}>{benefit}</li>)}
                   </ul>
-              </div>
+                </div> */}
 
               <FiChevronRight size={32} />
             </Link>

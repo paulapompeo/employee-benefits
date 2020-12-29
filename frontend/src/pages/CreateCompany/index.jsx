@@ -1,4 +1,4 @@
-import React, { useState, useEffect, ChangeEvent, FormEvent } from 'react';
+import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { FiChevronLeft } from 'react-icons/fi';
 import { Checkbox, Row, Col } from 'antd';
@@ -10,7 +10,7 @@ import api from '../../services/api.js';
 
 const CreateCompany = () => {
 
-  const history = useHistory();
+  // const history = useHistory();
 
   function handleInputChange(event) {
     // console.log(event.target.name, event.target.value);
@@ -36,7 +36,7 @@ const CreateCompany = () => {
     event.preventDefault();
 
     const { name, trade, cnpj, address } = formData;
-    const [ benefits ] = checkData;
+    const [benefits] = checkData;
 
     const data = { name, trade, cnpj, address, benefits };
 
@@ -95,17 +95,11 @@ const CreateCompany = () => {
             />
 
             <label htmlFor="benefits">Beneficios</label>
-            {/* <input
-              type="text"
-              name="benefits"
-              id="benefits"
-              onChange={handleInputChange}
-            /> */}
 
             <Checkbox.Group style={{ width: '100%' }} onChange={onChange}>
               <Row>
                 <Col span={8}>
-                  <Checkbox value={["VT", "VR", "VA"]}>VT + VR + VA</Checkbox>
+                  <Checkbox value="VT">VT</Checkbox>
                 </Col>
                 <Col span={8}>
                   <Checkbox value="VA">VA</Checkbox>
@@ -125,10 +119,6 @@ const CreateCompany = () => {
             Voltar
         </Link>
       </S.Content>
-
-
-
-
     </>
   )
 };

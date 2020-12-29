@@ -50,7 +50,7 @@ const CreateEmployee = () => {
     const data = { name, lastName, cpf, email };
 
     await api.post(`companies/${params.company}/employees`, data).then(() => {
-      alert('Cadastro realizado com sucesso!');
+      // alert('Cadastro realizado com sucesso!');
       // history.push('/companies/${params.company}/employees');
       history.goBack();
     }).catch(() => {
@@ -91,6 +91,7 @@ const CreateEmployee = () => {
               id="cpf"
               onChange={handleInputChange}
             />
+
 
             <label htmlFor="benefits">E-mail</label>
             <input
