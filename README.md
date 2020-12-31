@@ -4,8 +4,10 @@
 
 - [Employee Benefits](https://amazing-babbage-fbed88.netlify.app/)
 
+___
 <h1>
-    <blockquote class="imgur-embed-pub" lang="en" data-id="a/hnkOyFY" data-context="false" ><a href="//imgur.com/a/hnkOyFY"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+    <img src="https://ik.imagekit.io/fknziezxge/061DF9B5-9B41-4CC1-B497-EB30999CC321_0fCLyTTjcG41.jpeg">
+    <img src="https://ik.imagekit.io/fknziezxge/F5E55C04-3C13-494E-A8A7-0753714962C1_hOSK939fPwg2.jpeg">
 </h1>
 
 
