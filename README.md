@@ -1,4 +1,4 @@
-# Employee Benefits
+# 🚀 Employee Benefits
 
  - Aplicação desenvolvida para [Flash](https://flashapp.com.br/)
 
@@ -8,7 +8,7 @@
 GIF
 
 
-## Tecnologias Utilizadas
+## 💻 Tecnologias Utilizadas
 
 O projeto foi desenvolvido utilizando as seguintes tenologias:
 
@@ -24,7 +24,7 @@ O projeto foi desenvolvido utilizando as seguintes tenologias:
 - [Apollo-server](https://www.apollographql.com/docs/apollo-server/)
 
 
-## Instalação
+## 👷‍♀️ Instalação
 
 Primeiro, verifique se você possui o [Node.js](https://nodejs.org/en/) e [NPM](https://www.npmjs.com/), então clone o repositório via HTTPS, rodando o seguinte comando:
 
@@ -32,20 +32,20 @@ Primeiro, verifique se você possui o [Node.js](https://nodejs.org/en/) e [NPM](
 git clone https://github.com/paulapompeo/employee-benefits.git
 ````
 
-### Instalar dependências 
+#### Instalar dependências 
 
 ````
 npm install 
 ````
 
-### Rodando Frontend
+#### Rodando Frontend
 
 ````
 cd frontend
 npm start
 ````
 
-### Rodando API
+#### Rodando API
 
 ````
 cd node-api
@@ -54,7 +54,7 @@ npm run dev
 
 
 
-## Apollo-Sever 
+### Apollo-Sever 
 
 Em desenvolvimento: 
 
