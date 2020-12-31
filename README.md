@@ -57,8 +57,13 @@ npm run dev
 
 
 
-### Apollo-Sever 
+### Apollo-server 
 
 Em desenvolvimento: 
 
 Link para [repositório](https://github.com/paulapompeo/flash-apolloserver)
+
+````
+cd flash-apolloserver
+npm start
+````
