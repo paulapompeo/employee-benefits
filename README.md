@@ -4,8 +4,9 @@
 
 - [Employee Benefits](https://amazing-babbage-fbed88.netlify.app/)
 
-
-GIF
+<h1>
+    <blockquote class="imgur-embed-pub" lang="en" data-id="a/hnkOyFY" data-context="false" ><a href="//imgur.com/a/hnkOyFY"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+</h1>
 
 
 ## 💻 Tecnologias Utilizadas
