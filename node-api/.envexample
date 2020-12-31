@@ -1,0 +1,1 @@
+DATABASE_URL = mongodb+srv://<dbUser>:<dbUserpassword>@cluster0.xwfe0.mongodb.net/<dbname>?retryWrites=true&w=majority

@@ -23,3 +23,11 @@ app.use('/api', require('./src/routes'));
 app.listen(3333, () => {
     console.log('🚀 Servidor rodando na porta 3333')
 });
+
+
+//PORTA PARA HEROKU
+
+// const PORT = process.env.PORT || 3000;
+// app.listen(PORT, () => {
+//     console.log(`Our app is running on port ${ PORT }`);
+// });
