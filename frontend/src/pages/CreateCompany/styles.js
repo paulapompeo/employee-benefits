@@ -81,4 +81,5 @@ export const InputContainer = styled.div`
     &:hover {
       background: ${shade(0.3, '#FC2B90')};
     }
+  }
 `;
